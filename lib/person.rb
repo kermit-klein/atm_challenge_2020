@@ -1,7 +1,8 @@
 require "./lib/account.rb"
 
 class Person 
-            attr_accessor :name, :account, :cash
+
+        attr_accessor :name, :account, :cash
 
         def initialize(attrs= {})
         @name=set_name(attrs[:name])

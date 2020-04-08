@@ -1,9 +1,10 @@
 
+require "date"
 class Account
 
     STANDARD_VALIDITY_YRS = 5
 
-    attr_accessor :owner,:exp_date,:account_status,:balance
+    attr_accessor :owner,:exp_date,:account_status,:balance,:pin_code
 
     def initialize(attrs = {})
          @account_status = :active
@@ -20,13 +21,14 @@ class Account
         Date.today.next_year(STANDARD_VALIDITY_YRS).strftime("%m/%y")
     end
 
-private
-def set_owner(obj)
-    obj == nil ? missing_owner : @owner = obj
-end
+    private
 
-def missing_owner
-    raise "An Account owner is required"
-end
+    def set_owner(obj)
+        obj == nil ? missing_owner : @owner = obj
+    end
+
+    def missing_owner
+        raise "An Account owner is required"
+    end
 
 end

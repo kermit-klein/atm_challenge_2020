@@ -1,3 +1,4 @@
+require "date"
 class Atm 
 
     attr_accessor :funds
@@ -22,7 +23,8 @@ class Atm
         end 
     end
 
-      private
+    private
+
     def insufficient_funds_in_atm?(amount)
         @funds < amount 
     end
@@ -35,8 +37,8 @@ class Atm
         @funds -= amount
         account.balance = account.balance - amount
         { status:true,message:"success",date:Date.today, amount:amount, bills: add_bills(amount)}
-    
     end
+
     def add_bills(amount)
         denominations = [20,10, 5]
         bills = []
@@ -60,7 +62,6 @@ class Atm
     def account_disabled?(account_status)
         account_status != :active
     end
-
 end 
 
 
