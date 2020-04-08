@@ -1,3 +1,5 @@
+require "./lib/account.rb"
+
 class Person 
     attr_accessor :name, :account, :cash
 
@@ -9,6 +11,11 @@ end
 
 def set_name(obj)
      obj== nil ? (raise "A name is required"): @owner = obj
+end
+
+def create_account 
+@account = Account.new(owner: self)
+  
 end
 
 end
