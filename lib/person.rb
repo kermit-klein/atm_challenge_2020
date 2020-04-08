@@ -6,7 +6,7 @@ def initialize(attrs= {})
 
 end
 def set_name(obj)
-     @owner = obj
+     obj== nil ? (raise "A name is required"): @owner = obj
 end
 
 end
