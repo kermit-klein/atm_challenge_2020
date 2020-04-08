@@ -1,9 +1,13 @@
+
 class Account
 
     STANDARD_VALIDITY_YRS = 5
 
+    attr_accessor :owner,:exp_date
+
     def initialize(attrs = {})
          @account_status = :active
+         @exp_date = set_expire_date
          set_owner(attrs[:owner])
     end
 
@@ -14,7 +18,7 @@ class Account
     
     def set_expire_date
 
-        Date.today.next_year(STANDARD_VALIDITY_YRS).strft("%m/%y")
+        Date.today.next_year(STANDARD_VALIDITY_YRS).strftime("%m/%y")
         
     end
 
@@ -26,4 +30,5 @@ end
 def missing_owner
     raise "An Account owner is required"
 end
+
 end
