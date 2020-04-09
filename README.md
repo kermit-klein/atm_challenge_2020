@@ -2,7 +2,34 @@
 
 ## The Project
 
-## Dependencies
+This project will allow us to create an ATM machine so the user can withdraw and deposit money.
+It will include all the features such as: creating and using a valid account with a pin code and a balance status.  
+The project is done by **Test Driven Development** technique. Every feature added after they have passed testing
+
+## Authors
+
+Git Profiles:  
+https://github.com/PaulineBA  
+https://github.com/kermit-klein
+
+## Dependencies/Installing
+
+In order to use the app you will need the following;  
+-- Ruby     (check https://github.com/rvm/ubuntu_rvm)  
+-- Bundler  ($ gem install bundler)  
+-- Rspec    (include rspec in Gemfile)  
+-- IRB or Pry  (check https://github.com/pry/pry)
+
+
+**To download**
+
+>git clone https://github.com/kermit-klein/atm_challenge_2020.git 
+
+or  
+
+>git clone https://github.com/PaulineBA/atm_challenge_2020.git
+
+
 
 ## Terminal Instructions
 
