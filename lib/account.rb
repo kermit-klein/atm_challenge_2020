@@ -14,8 +14,8 @@ class Account
          set_owner(attrs[:owner])
     end
 
-    def deactivate
-        @account_status = :deactivated
+    def deactivate #Instance method is used because this functionality is tied to a particular instance of Account class, not whole Account class
+        @account_status = :deactivated 
     end
     
     def set_expire_date
