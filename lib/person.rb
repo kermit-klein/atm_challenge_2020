@@ -31,4 +31,8 @@ class Person
             @account.balance += amount
         end
 
+        def withdraw(args={})
+        args[:atm]== nil ? (raise 'An ATM is required'): atm = args[:atm]
+        end
+
 end
