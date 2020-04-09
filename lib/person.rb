@@ -33,6 +33,8 @@ class Person
 
         def withdraw(args={})
         args[:atm]== nil ? (raise 'An ATM is required'): atm = args[:atm]
+        atm_output=atm.withdraw(args[:amount], args[:pin], args[:account])
+        atm_output[:status]==false ? atm_output[:message]: @cash+=args[:amount]
         end
 
 end
